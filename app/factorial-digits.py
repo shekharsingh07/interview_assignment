@@ -17,7 +17,7 @@ def sep_func(fact_input):
         sep_array.insert(0,x)
     return sep_array
 
-def main(user_input = int(sys.argv[1]):
+def main(user_input):
     # 1. Calculate factorial of input number
     fact_input = np.math.factorial(user_input)
     # 2. Seperate digits and sum them:
@@ -25,3 +25,13 @@ def main(user_input = int(sys.argv[1]):
     fact_sum = np.sum(sep_digits)
     # 3. Print output value:
     print(fact_sum)
+
+if __name__=="__main__":
+    try:
+	user_input = int(sys.argv[1])
+	if user_input < 0:
+	    print("Invalid!")
+	else:
+	    main(user_input)
+    except:
+	print("Error!")
