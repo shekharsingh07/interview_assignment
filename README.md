@@ -14,6 +14,7 @@
   <li>app/factorial-digits.py  -   This is the source code within the "app" folder</li>
   <li>Dockerfile               -   The file to build the Docker image</li>
   <li>dependencies.txt         -   This includes all the dependencies</li>
+  <li>shekharsingh.tar.gz      -   This is a tarball file containing all the resources for the docker container build</li>
 </ul>
 
 **2.  Usage:**<br>To run the project you would need to follow these steps:
@@ -42,7 +43,7 @@ For testing purposes, I've run the following commands and received the correspon
   Invalid! Please enter a positive integer.
   $ docker run --rm factorial-digits Ten
   >>
-  Error! Please enter a positive value of int() type
+  Error! Please enter a positive value of int type
   ```
   
 **3.  License:** MIT license
