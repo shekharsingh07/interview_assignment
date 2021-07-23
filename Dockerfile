@@ -1,11 +1,16 @@
 FROM python:3
 
-WORKDIR .	# Setting up work directory in container
+# Setting up work directory in container
+WORKDIR .
 
-COPY app/ .				# copy files into work dir
+# copy source files into work dir
+COPY app/ .
 
-COPY requirements.txt .			# copy dependencies into work dir
+# copy dependencies into work dir
+COPY requirements.txt .			
 
-RUN pip install -r requirements.txt	# install dependencies
+# install dependencies
+RUN pip install -r requirements.txt	
 
-CMD [ "python", "./app/factorial-digits.py"]	# setting entrypoint
+# setting entrypoint
+CMD [ "python", "./app/factorial-digits.py"]
