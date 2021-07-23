@@ -10,16 +10,16 @@ import numpy as np
 import sys
 
 # Function to seperate the digits of the factorial:
-def sep_sum_func(input_fact):
-    sep_array = []
+def separate_sum_func(input_fact):
+    separate_array = []
     # 1. Separating digits:
     while input_fact !=0:
-        x = np.mod(input_fact, 10)      # Dividing by 10, the mod is separating the value
-        input_fact = input_fact//10     # Updating input_fact with the quotient o dividing by 10
-        sep_array.insert(0,x)           # adding the remainder value for each loop until input_fact reaches zero
+        remainder = np.mod(input_fact, 10)      # Dividing by 10, the mod is separating the value
+        input_fact = input_fact//10             # Updating input_fact with the quotient o dividing by 10
+        separate_array.insert(0,remainder)      # adding the remainder value for each loop until input_fact reaches zero
 
     # 2. Summing values:
-    fact_sum = np.sum(sep_array)
+    fact_sum = np.sum(separate_array)
     return fact_sum
 
 def main(user_input):
@@ -27,15 +27,15 @@ def main(user_input):
     input_fact = np.math.factorial(user_input)
 
     # 2. Separate digits and sum them:
-    fact_sum = sep_sum_func(input_fact)
+    answer = separate_sum_func(input_fact)
 
     # 3. Print output value:
-    print(fact_sum)
+    print(answer)
 
 if __name__ == "__main__":
     try:
         user_input = int(sys.argv[1])
-        if user_input < 0:              # Factorials of negative integers are invalid
+        if user_input < 0:                      # Factorials of negative integers are invalid
             print("Invalid! Please enter a positive integer.")
         else:
             main(user_input)
