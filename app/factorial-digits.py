@@ -9,7 +9,7 @@
 import numpy as np
 import sys
 
-# Function to seperate the digits of the factorial:
+# Function to seperate and add the digits of the factorial:
 def separate_sum_func(input_fact):
     separate_array = []
     # 1. Separating digits:
@@ -37,7 +37,9 @@ if __name__ == "__main__":
         user_input = int(sys.argv[1])
         if user_input < 0:                      # Factorials of negative integers are invalid
             print("Invalid! Please enter a positive integer.")
+        elif isinstance(user_input,float):
+            print("Invalid! Please enter a positive integer")
         else:
             main(user_input)
-    except:
-        print("Error!")
+    except ValueError:
+        print("Error! Please enter a positive value of int type")
