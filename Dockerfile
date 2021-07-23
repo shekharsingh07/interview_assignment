@@ -1,9 +1,11 @@
 FROM python:3
 
-ADD app/factorial-digits.py /
+WORKDIR .	# Setting up work directory in container
 
-ADD requirements.txt .
+COPY app/ .				# copy files into work dir
 
-RUN pip install -r requirements.txt
+COPY requirements.txt .			# copy dependencies into work dir
 
-CMD [ "python", "./app/factorial-digits.py"]
+RUN pip install -r requirements.txt	# install dependencies
+
+CMD [ "python", "./app/factorial-digits.py"]	# setting entrypoint
