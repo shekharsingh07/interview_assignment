@@ -42,7 +42,7 @@ For testing purposes, I've run the following commands and received the correspon
   Invalid! Please enter a positive integer.
   $ docker run --rm factorial-digits Ten
   >>
-  Error!
+  Error! Please enter a positive value of int() type
   ```
   
 **3.  License:** MIT license
