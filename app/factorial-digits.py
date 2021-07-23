@@ -26,12 +26,12 @@ def main(user_input):
     # 3. Print output value:
     print(fact_sum)
 
-if __name__=="__main__":
+if __name__ == "__main__":
     try:
-	user_input = int(sys.argv[1])
-	if user_input < 0:
-	    print("Invalid!")
-	else:
-	    main(user_input)
+        user_input = int(sys.argv[1])
+        if user_input < 0:
+            print("Invalid!")
+        else:
+            main(user_input)
     except:
-	print("Error!")
+        print("Error!")
