@@ -13,4 +13,4 @@ COPY requirements.txt .
 RUN pip install -r requirements.txt	
 
 # setting entrypoint
-ENTRYPOINT [ "python", "./app/factorial-digits.py"]
+ENTRYPOINT [ "python", "./factorial-digits.py"]
